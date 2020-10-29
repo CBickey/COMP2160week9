@@ -5,10 +5,10 @@ using UnityEngine;
 
 public class Scoremanager : MonoBehaviour
 {
-    public int coinsGathered;
+    public int coinsGathered = 0;
     public int score = 0;
     public int coinsWorth = 20;
-    public Coin coin;
+    public Player player;
 
     void Start()
     {
@@ -18,6 +18,6 @@ public class Scoremanager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        score = coin.coinsGathered * coinsWorth;
+        score = player.coinsGathered * coinsWorth;
     }
 }
